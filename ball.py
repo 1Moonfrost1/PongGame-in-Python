@@ -22,13 +22,18 @@ class Ball(Turtle):
     def collision_up_down(self):
         self.direction = 360 - self.direction
         self.setheading(self.direction)
+        self.forward(10)
 
     def collision_left_right(self):
         self.direction = (180 - self.direction)%360
         self.setheading(self.direction)
+        self.forward(10)
 
     def move(self):
         self.forward(self.MOVEMENT)
 
-    def out_of_bounds(self, width):
-        return not(-width/2 <= self.xcor() <= width/2)
+    def out_of_left_bound(self, width):
+        return self.xcor() <= -width/2 -40
+
+    def out_of_right_bound(self, width):
+        return self.xcor() >= width/2 + 40

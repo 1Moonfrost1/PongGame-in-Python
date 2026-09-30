@@ -38,9 +38,3 @@ class Paddle(Turtle):
         if self.ycor() >= height + 10*self.stretch:
             self.change_direction_down()
             self.move()
-
-    def is_within_distance(self, ball, distance):
-        if abs(self.xcor()) - abs(ball.xcor()) >= distance-3:
-            if self.ycor() -10*self.stretch <= ball.ycor() <= self.ycor() + 10*self.stretch and abs(self.xcor() - ball.xcor()) <= distance:
-                return True
-        return False
