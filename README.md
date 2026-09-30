@@ -1,5 +1,3 @@
 A PongGame in Python using Turtle.
 
-As a sidenote the ball works based on heading and speed in that direction which is problematic when it comes to clipping the paddle and the ball, as the ball can get stuck inside the paddle.
-A fix to this would be either moving the ball using velocity (speed on x coord , speed on y coord), or by making it so that the collision is within a range where the turtle.forward()
-can get out of when the collision occurs.
+Within the game itself there should be no clipping bugs, and the ball passing through the paddle is intended. Once it has crossed over a certain distance, even if you clip the ball it will get ignored as if though you have missed.

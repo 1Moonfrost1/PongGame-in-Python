@@ -22,7 +22,6 @@ class Ball(Turtle):
     def collision_up_down(self):
         self.direction = 360 - self.direction
         self.setheading(self.direction)
-        self.forward(10)
 
     def collision_left_right(self):
         self.direction = (180 - self.direction)%360
